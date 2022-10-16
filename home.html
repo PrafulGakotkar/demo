@@ -1,0 +1,27 @@
+<input type="text" id="x1" placeholder="amount"><br><br>
+<input type="text"id="x2" placeholder="rate of interest"><br><br>
+<input type="text"id="x3" placeholder="duration"><br><br>
+<button onclick="myfun()">calculate</button><br><br>
+<label for="">Simple interest<p id="res">Simple Interest</p></label><br>
+<label for="">Final Amount<p id="totamt">Final Amount</p></label>
+
+<script>
+function myfun(){
+    console.log(document);
+    console.log(document.getElementById('x1'));
+    console.log(document.getElementById('x2'));
+    console.log(document.getElementById('x3'));
+    amt=document.getElementById('x1').value
+    roi=document.getElementById('x2').value
+    durat=document.getElementById('x3').value
+    
+    tot = (amt*roi*(1+parseInt(roi)**durat))/((1+parseInt(roi))**(durat-1));
+    //final= parseInt(amt) + parseInt( tot);
+    console.log(document.getElementById('res'));
+     document.getElementById('res').innerText=tot;
+    // console.log(document.getElementById('totamt'));
+    // document.getElementById('totamt').innerText=final;
+
+}
+
+</script>

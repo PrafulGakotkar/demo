@@ -1,0 +1,31 @@
+<input type="text" id="x1"placeholder="Enter amt"><br><br> 
+<input type="number" min="0" max="100" id="x2"placeholder="Enter discount"><br><br>
+<button onclick="myfunction()">Enter</button>
+<p id = "result"> Discount Price</p>
+<script>
+
+    function myfunction(){
+    
+        console.log(document);
+        console.log(document.getElementById('x1'));
+        console.log(document.getElementById('x2'));
+        amount=document.getElementById('x1').value
+        console.log(amount);
+        disc=document.getElementById('x2').value
+        console.log(disc);
+        console.log(typeof amount);
+        console.log(typeof disc);
+       //console.log(amount + disc);
+      // ans = parseInt(amount)+parseInt(disc) 
+      // console.log(ans); 
+     //ans2 = parseFloat(amount)+parseFloat(disc)
+     //console.log(ans2); 
+     ans1 = amount-((amount*disc)/100);
+     console.log(ans1);
+     console.log(document.getElementById('result'));
+     document.getElementById('result').innerText=ans1;
+    // document.getElementById('result').outerHTML=ans1;
+
+    }
+
+</script>
